@@ -1,10 +1,12 @@
 language: csharp
 mono:
   - latest
+python:
+  -"3.4"
 install:
   - sudo apt-get update
-  - sudo apt-get install python3-venv
-  - python3 -m venv /home/travis/pyenv
+  - sudo apt-get install python-virtualenv 
+  - virtualenv -p python3.4 /home/travis/pyenv
   - source /home/travis/pyenv/bin/activate
   - pip3 install numpy==1.11.1
   - pip3 install scipy==0.17.1
