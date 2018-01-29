@@ -2,6 +2,7 @@ language: csharp
 mono:
   - latest
 install:
+  - sudo apt-get install python3-venv
   - python3 -m venv /home/travis/pyenv
   - source /home/travis/pyenv/bin/activate
   - pip3 install numpy==1.11.1
